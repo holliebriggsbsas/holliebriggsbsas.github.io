@@ -46,7 +46,7 @@
       }
     ],
     "versionFirst": "4.7.6",
-    "uniqCompNum": 217,
+    "uniqCompNum": 218,
     "versionPublish": "4.12.4",
     "favicon": false,
     "noImageResize": null,
@@ -415,6 +415,101 @@
           "_isUserblock": true,
           "_sourceTheme": "mobirise4",
           "_cid": "seJoyoBXeV",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "h4": {
+              "font-weight": "500",
+              "margin-bottom": "0",
+              "text-align": "left"
+            },
+            "p": {
+              "color": "#767676",
+              "margin": "0"
+            },
+            ".card-box": {
+              "background-color": "@cardsBg",
+              "& when (@transparentCard)": {
+                "background-color": "transparent"
+              },
+              "& when not (@transparentCard)": {
+                "padding": "2rem"
+              }
+            },
+            ".mbr-section-btn": {
+              "padding-top": "1rem"
+            },
+            ".card-wrapper": {
+              "position": "relative",
+              "box-shadow": "0px 0px 0px 0px rgba(0, 0, 0, 0)",
+              "transition": "box-shadow 0.3s",
+              "& when not (@transparentCard)": {
+                "&:hover": {
+                  "box-shadow": "0px 0px 30px 0px rgba(0, 0, 0, 0.05)",
+                  "transition": "box-shadow 0.3s"
+                }
+              }
+            },
+            ".wrapper": {
+              "height": "100%",
+              "display": "flex",
+              "flex-direction": "column",
+              "justify-content": "flex-start"
+            },
+            ".border_wrapper": {
+              "border-left": "1px solid @colorBorder",
+              "padding-left": "2rem"
+            },
+            "@media (max-width: 991px)": {
+              ".border_wrapper": {
+                "border-left": "none",
+                "padding-left": "0"
+              },
+              ".mbr-section-btn a": {
+                "padding": "1rem 2rem"
+              },
+              ".mbr-figure": {
+                "padding-bottom": "2rem"
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".wrapper": {
+                "align-items": "center",
+                "text-align": "center"
+              },
+              ".col-left h4": {
+                "padding-top": "1rem"
+              },
+              "p.col-right": {
+                "padding-top": "1rem"
+              }
+            },
+            ".card-title": {
+              "color": "#dac9c1"
+            },
+            "P": {
+              "color": "#dac9c1"
+            }
+          },
+          "_name": "services4",
+          "_customHTML": "<section class=\"services4\" group=\"Features\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\" xmlns=\"http://www.w3.org/1999/html\">\n    <!---->\n    <mbr-parameters>\n        <!---->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"0\">\n        <!---->\n        <input type=\"range\" inline title=\"Media Size\" name=\"mediaSize\" min=\"50\" max=\"100\" step=\"5\" value=\"80\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Cost\" name=\"showCost\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n        <!---->\n        <input type=\"checkbox\" title=\"Transparent Card\" name=\"transparentCard\" checked>\n        <input type=\"color\" title=\"Cards Bg\" name=\"cardsBg\" value=\"#ffffff\" condition=\"!transparentCard\">\n        <input type=\"color\" title=\"Cards Border\" name=\"colorBorder\" value=\"#dac9c1\">\n        <select title=\"Cards\" name=\"cardsAmount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\" selected>3</option>\n        </select>\n        <!---->\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#0a360d\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#cebfaf\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n        <!---->\n    </mbr-parameters>\n    <!---->\n    <!--Overlay-->\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <!--Container-->\n    <div class=\"container\">\n        <div class=\"row\" mbr-cards=\"bootstrap\">\n            <!--Card-1-->\n            <div class=\"card p-3 col-12\">\n                <div class=\"card-wrapper media-container-row media-container-row\">\n                    <div class=\"card-box\">\n                        <div class=\"row\">\n                            <div class=\"col-12 col-md-12 col-lg-4\">\n                                <div class=\"wrapper\">\n                                    <!--Image-->\n                                    <div class=\"mbr-figure\" mbr-style=\"{'width': mediaSize + '%'}\">\n                                        <img src=\"@PROJECT_PATH@/assets/images/quicksilver-555-pilothouse-1-558x419.jpg\" alt=\"Mobirise\" title>\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"col-12 col-md-7 col-lg-4\">\n                                <div class=\"wrapper col-left\">\n                                    <!--Title-->\n                                    <h4 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">QUICKSILVER 555 Pilothouse&nbsp;</h4>\n                                    <!--Subtitle-->\n                                    <p class=\"mbr-text mbr-fonts-style pt-3\" mbr-theme-style=\"display-7\" mbr-if=\"showText\">QUICKSILVER 555 PILOTHOUSE \"YEAR 2014\nCaptur 555 Pilothouse\nLength (m): 5.31Number of persons: 5\nMax engine power (HP / kW): 115/85\nwith engine \"MERCURY 115 EFFI 4-Stroke\" yr. 2015\nThe engine has 100 operating hours.&nbsp;Open, Fisherman, Covetlin, Saver, Sessa, Ranieri, Beneteau, Jeanneau, Bellingardo, Lomac, Quicksilver, Other, Sacs, Cap Camarat, Sessa, Salmeri, Orizzonti, Marlin<br></p>\n                                </div>\n                            </div>\n                            <div class=\"col-12 col-md-5 col-lg-4\">\n                                <div class=\"wrapper border_wrapper\">\n                                    <!--Cost-->\n                                    <p class=\"mbr-text mbr-fonts-style col-right mbr-black align-center\" mbr-theme-style=\"display-2\" mbr-if=\"showCost\" data-app-selector=\".col-right\">\n                                        $990\n                                    </p>\n                                    <!--Btn-->\n                                    <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn col-right align-center\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-class=\"{'align-left' : alignBtn == 1, 'align-center' : alignBtn == 2, 'align-right' : alignBtn == 3}\"><a href=\"https://boat-little.co.uk/page3.html\" class=\"btn m-0 btn-primary\" data-app-placeholder=\"Type Text\"><span class=\"mbri-protect mbr-iconfont mbr-iconfont-btn\" style=\"color: rgb(0, 220, 18);\"></span>\n                                            Price: €9.500</a></div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n            <!--Card-2-->\n            <div class=\"card p-3 col-12\" mbr-if=\"cardsAmount > '1'\">\n                <div class=\"card-wrapper media-container-row media-container-row\">\n                    <div class=\"card-box\">\n                        <div class=\"row\">\n                            <div class=\"col-12 col-md-12 col-lg-4\">\n                                <div class=\"wrapper\">\n                                    <!--Image-->\n                                    <div class=\"mbr-figure\" mbr-style=\"{'width': mediaSize + '%'}\">\n                                        <img src=\"@PROJECT_PATH@/assets/images/mf0101-6-558x401.jpg\" alt=\"Mobirise\" title>\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"col-12 col-md-7 col-lg-4\">\n                                <div class=\"wrapper col-left\">\n                                    <!--Title-->\n                                    <h4 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">Jeanneau Merry Fisher 755</h4>\n                                    <!--Subtitle-->\n                                    <p class=\"mbr-text mbr-fonts-style pt-3\" mbr-theme-style=\"display-7\" mbr-if=\"showText\">2013 Jeanneau Merry Fisher 755 Motor Boat. Honda BF150 4 Stroke Outboard. Asking price includes a full engine service/diagnostic report. Fresh Antifouling. Full professional machine polish. 3 Months Engine Warranty is supplied as standard, extendable up to 3 Years additionally if required. We have the original VAT receipt from new, also have full service history from new.<br></p>\n                                </div>\n                            </div>\n                            <div class=\"col-12 col-md-5 col-lg-4\">\n                                <div class=\"wrapper border_wrapper\">\n                                    <!--Cost-->\n                                    <p class=\"mbr-text mbr-fonts-style col-right mbr-black align-center\" mbr-theme-style=\"display-2\" mbr-if=\"showCost\" data-app-selector=\".col-right\">\n                                        $990\n                                    </p>\n                                    <!--Btn-->\n                                    <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn col-right align-center\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-class=\"{'align-left' : alignBtn == 1, 'align-center' : alignBtn == 2, 'align-right' : alignBtn == 3}\"><a href=\"https://boat-little.co.uk/page3.html\" class=\"btn m-0 btn-primary\" data-app-placeholder=\"Type Text\"><span class=\"mbri-protect mbr-iconfont mbr-iconfont-btn\" style=\"color: rgb(0, 220, 18);\"></span>\n                                            Price: €12.500</a></div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n            <!--Card-3-->\n            <div class=\"card p-3 col-12\" mbr-if=\"cardsAmount > '2'\">\n                <div class=\"card-wrapper media-container-row media-container-row\">\n                    <div class=\"card-box\">\n                        <div class=\"row\">\n                            <div class=\"col-12 col-md-12 col-lg-4\">\n                                <div class=\"wrapper\">\n                                    <!--Image-->\n                                    <div class=\"mbr-figure\" mbr-style=\"{'width': mediaSize + '%'}\">\n                                        <img src=\"@PROJECT_PATH@/assets/images/7546628-20200806055138863-1-xlarge-558x419.jpg\" alt=\"Mobirise\" title>\n                                    </div>\n                                </div>\n                            </div>\n                            <div class=\"col-12 col-md-7 col-lg-4\">\n                                <div class=\"wrapper col-left\">\n                                    <!--Title-->\n                                    <h4 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">1998 BAYLINER 2503 TROPHY CENTER CONSOLE</h4>\n                                    <!--Subtitle-->\n                                    <p class=\"mbr-text mbr-fonts-style pt-3\" mbr-theme-style=\"display-7\" mbr-if=\"showText\"><p><span style=\"font-size: 1rem; background-color: transparent;\">lovely Boat. This Bayliner Trophy centre console is a fantastic all round day boat, for family days out, sunbathing on the forward sun pad, lots of social space for friends, and rod holders and live bait lockers for fishing. Complete with a Evinrude Etec 200HP outboard and Tohatsu 6HP auxiliary</span>&nbsp;,&nbsp;- Evinrude E-Tec 200HP outboard,&nbsp;<span style=\"font-size: 1rem; background-color: transparent;\">Navigation&nbsp;</span></p>Compass ,iCom VHF radio ,Hummingbird 587dHD GPS , Navigation lights&nbsp;<br><p><br></p></p>\n                                </div>\n                            </div>\n                            <div class=\"col-12 col-md-5 col-lg-4\">\n                                <div class=\"wrapper border_wrapper\">\n                                    <!--Cost-->\n                                    <p class=\"mbr-text mbr-fonts-style col-right mbr-black align-center\" mbr-theme-style=\"display-2\" mbr-if=\"showCost\" data-app-selector=\".col-right\">\n                                        $990\n                                    </p>\n                                    <!--Btn-->\n                                    <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn col-right align-center\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-class=\"{'align-left' : alignBtn == 1, 'align-center' : alignBtn == 2, 'align-right' : alignBtn == 3}\"><a href=\"https://boat-little.co.uk/page3.html\" class=\"btn m-0 btn-primary\" data-app-placeholder=\"Type Text\"><span class=\"mbri-protect mbr-iconfont mbr-iconfont-btn\" style=\"color: rgb(0, 220, 18);\"></span>\n                                            Price: €14.000</a></div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_anchor": "services4-61",
+          "_isUserblock": true,
+          "_sourceTheme": "mobirise4",
+          "_cid": "seJrdlEZx6",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
